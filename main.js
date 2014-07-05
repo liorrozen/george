@@ -6,7 +6,7 @@ var George = {
         this.george = new webkitSpeechRecognition();
         this.george.continuous = true;
         this.george.interimResults = false;
-        this.george.lang = "en";
+        this.george.lang = "en-GB";
         this.george.voice = window.speechSynthesis.getVoices()[ 1 ];
         this.start();
     },
