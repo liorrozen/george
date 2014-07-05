@@ -28,16 +28,15 @@ var George = {
             var len = results.length - 1;
             var res = results[ len ];
             if ( res.isFinal && self.isGeorge( res ) ){
-                self.say( "I am listening" );
                 self.listen();
                 return;
             }
-            // });
         };
     },
 
     "listen": function(){
         $( "#listening" ).show();
+        $( "#result" ).text( "" );
         var self = this;
         this.george.onresult = function(event) {
             var len = event.results.length - 1;
@@ -49,6 +48,7 @@ var George = {
 
     "say": function( text ){
         console.log( text );
+        $( "#result" ).text( text );
     },
 
     "isGeorge": function( res ){
